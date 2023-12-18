@@ -13,7 +13,8 @@
 	<artifactId>spring-boot-consul-template</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-consul-template</name>
-	<description>This is an basis Example of an Spring Boot app and consul connection with running
+	<description>This is an basis Example of an Spring Boot app and consul
+		connection with running
 		Github Action </description>
 	<properties>
 		<java.version>21</java.version>
@@ -32,13 +33,15 @@
 		<sonar.language>java</sonar.language>
 		<sonar.verbose>true</sonar.verbose>
 		<jacoco.version>0.8.11</jacoco.version>
+		<spring-cloud.version>2023.0.0</spring-cloud.version>
 	</properties>
 
 	<distributionManagement>
 		<repository>
 			<id>github</id>
 			<name>Remote Maven Repo for gittertester</name>
-			<url>https://maven.pkg.github.com/pixomia/spring-boot-consul-template</url>
+			<url>
+				https://maven.pkg.github.com/pixomia/spring-boot-consul-template</url>
 		</repository>
 	</distributionManagement>
 	<repositories>
@@ -63,12 +66,19 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-consul-config</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
