@@ -10,10 +10,10 @@
 		<relativePath />
 	</parent>
 	<groupId>com.github.pixomia</groupId>
-	<artifactId>spring-boot-template</artifactId>
+	<artifactId>spring-boot-consul-template</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-template</name>
-	<description>This is an basis Example of an Spring Boot app with running
+	<name>spring-boot-consul-template</name>
+	<description>This is an basis Example of an Spring Boot app and consul connection with running
 		Github Action </description>
 	<properties>
 		<java.version>21</java.version>
@@ -38,7 +38,7 @@
 		<repository>
 			<id>github</id>
 			<name>Remote Maven Repo for gittertester</name>
-			<url>https://maven.pkg.github.com/pixomia/spring-boot-template</url>
+			<url>https://maven.pkg.github.com/pixomia/spring-boot-consul-template</url>
 		</repository>
 	</distributionManagement>
 	<repositories>
